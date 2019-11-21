@@ -1,4 +1,4 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme } from '@material-ui/core/styles';
 
 export const defaultPalette = {
   /* Refer to the settings like this   theme.palette.primary.main */
@@ -10,8 +10,8 @@ export const defaultPalette = {
     main: "#999999",
     light: "#BBBBBB"
   },
-  text: {
-    secondary: "#999999"
+  text:{
+    secondary: "#999999",
   },
 
   background: {
@@ -23,11 +23,12 @@ export const defaultPalette = {
   hover: { main: "#450000" },
   accent: { main: "#88AA00" },
 
+
   // These three are from Material-UI Snackbar documentatation,
   error: { main: "#D32F2F" },
   warning: { main: "#FFA000" },
   information: { main: "#1976D2" },
-  success: { main: "#43A047" }
+  success: { main: "#43A047" },
 };
 
 // This is not part of the product as such, a technical test palette
@@ -40,8 +41,8 @@ export const redPalette = {
     main: "#FF8888",
     light: "#F44336"
   },
-  text: {
-    secondary: "#FF8888"
+  text:{
+    secondary: "#FF8888",
   },
 
   background: {
@@ -59,9 +60,10 @@ export const redPalette = {
   warning: { main: "#FF6600" },
   information: { main: "#B97446" },
   success: { main: "#CC9900" },
-  textDecoration: {
-    main: "none"
-  }
+  textDecoration : {
+    main: 'none',
+  },
+
 };
 
 // This is not part of the product as such, a technical test palette
@@ -75,7 +77,7 @@ export const yellowPalette = {
     light: "#FFFFAA"
   },
   text: {
-    secondary: "#FFFF99"
+    secondary:"#FFFF99",
   },
 
   background: {
@@ -92,10 +94,11 @@ export const yellowPalette = {
   error: { main: "#FF6600" },
   warning: { main: "#FFCC00" },
   information: { main: "#66FFFF" },
-  success: { main: "#CCFF33" }
+  success: { main: "#CCFF33" },
+
 };
 
-const selectedPalette = redPalette; //  defaultPalette | redPalette | yellowPalette
+const selectedPalette = redPalette;  //  defaultPalette | redPalette | yellowPalette
 /* redPalette and yellowPalette are technical tools for finding
 any hard-coded elements/colors = not
  using Material UI components and/or the theme colors
@@ -107,16 +110,16 @@ const theme = createMuiTheme({
     /* Refer to the settings like this   theme.palette.primary.main */
     primary: {
       main: selectedPalette.primary.main,
-      light: selectedPalette.primary.light
+      light: selectedPalette.primary.light,
     },
 
     secondary: {
       main: selectedPalette.secondary.main,
-      light: selectedPalette.secondary.light
+      light: selectedPalette.secondary.light,
     },
 
-    text: {
-      secondary: selectedPalette.text.secondary
+    text:{
+      secondary: selectedPalette.text.secondary,
     },
 
     background: {
@@ -124,35 +127,41 @@ const theme = createMuiTheme({
       default: selectedPalette.background.default
     },
 
-    ourButton: { hoverText: selectedPalette.ourButton.hoverText },
-    hover: { main: selectedPalette.hover.main },
-    accent: { main: selectedPalette.accent.main },
+    ourButton: { hoverText: selectedPalette.ourButton.hoverText, },
+    hover: { main: selectedPalette.hover.main, },
+    accent: { main: selectedPalette.accent.main, },
 
-    error: { main: selectedPalette.error.main },
-    warning: { main: selectedPalette.warning.main },
+    error: { main: selectedPalette.error.main, },
+    warning: { main: selectedPalette.warning.main, },
     information: { main: selectedPalette.information.main },
-    success: { main: selectedPalette.success.main },
+    success: { main: selectedPalette.success.main, },
 
     //https://spectrum.chat/material-ui/help/understanding-theming-especially-getcontrasttext~de612107-9256-4e74-ad63-453ab8a29812
     contrastThreshold: 4,
-    tonalOffset: 0.1
+    tonalOffset: 0.1,
+
+
   },
   typography: {
     // Project's possible main font definitions here, otherwise Material-UI defaults
-    body2: {
-      color: selectedPalette.primary.main
-    }
+    body2:{
+      color: selectedPalette.primary.main,
+
+    },
     /*  a:{
-        color: selectedPalette.primary.main,
-      } */
+       color: selectedPalette.primary.main,
+     } */
+
   },
-  overrides: {
-    MuiListItemIcon: {
-      root: {
-        color: selectedPalette.primary.main
+  overrides:{
+    MuiListItemIcon:{
+      root:{
+        color:selectedPalette.primary.main,
       }
     }
-  }
+  },
+
+
 });
 
 export default theme;
